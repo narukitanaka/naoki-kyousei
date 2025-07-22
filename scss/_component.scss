@@ -8,7 +8,7 @@ component
   font-family: "Lora", serif;
   font-size: 1.6rem;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: v.$ttlTxt-color;
   @include c.mq() {
     font-size: 1.4rem;
@@ -120,7 +120,7 @@ component
       width: 10rem;
       aspect-ratio: 1/1;
       border-radius: 50%;
-      background: url(images/grade-noise.svg) no-repeat center/cover;
+      background: url(images/grade-noise.png) no-repeat center/cover;
       transition: all 0.3s;
       svg {
         transition: all 0.3s;

@@ -1,4 +1,12 @@
 @use "variable" as v;
+/*
+Theme Name: なおき矯正歯科・小児矯正歯科
+Description: テーマの説明
+Theme URI: テーマのURL
+Author: テーマの作者
+Author URI: 作者のサイト
+Version: バージョン
+*/
 /*************************************************
 common-style
 *************************************************/
@@ -167,9 +175,9 @@ body {
   font-family: YakuHanJP, "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
     "Noto Sans JP", Meiryo, sans-serif;
   min-height: 100dvh;
-  &#top {
-    background-color: v.$bg-color01;
-  }
+  // &#top {
+  //   background-color: v.$bg-color01;
+  // }
 }
 
 .clearfix:after {
@@ -228,7 +236,7 @@ h1 {
 h2 {
   font-size: 2.8rem;
   line-height: 1.6;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   @include mq() {
     letter-spacing: 1px;
   }
@@ -316,4 +324,8 @@ div {
       opacity: 0.5;
     }
   }
+}
+
+pre {
+  white-space: pre-wrap;
 }

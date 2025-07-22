@@ -1,21 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 // Fv過ぎるとヘッダーを固定
 ///////////////////////////////////////////////////////////////////////////////////////
-// document.addEventListener("DOMContentLoaded", function () {
-//   const header = document.querySelector("header");
-//   const fvHeight = document.querySelector(".fv").offsetHeight;
-
-//   function handleScroll() {
-//     if (window.scrollY > fvHeight) {
-//       header.classList.add("fixed");
-//     } else {
-//       header.classList.remove("fixed");
-//     }
-//   }
-
-//   window.addEventListener("scroll", handleScroll);
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("header");
   const fvHeight = document.querySelector(".fv").offsetHeight;
@@ -48,7 +33,6 @@ function initSwipers() {
   const caseSlider01 = document.querySelector(".top_pediatric-cases");
   if (caseSlider01) {
     const caseSlider01Instance = new Swiper(caseSlider01, {
-      loop: true,
       speed: 1500,
       allowTouchMove: false,
       slidesPerView: 1.11,
@@ -73,7 +57,6 @@ function initSwipers() {
   const caseSlider02 = document.querySelector(".top_adult-cases");
   if (caseSlider02) {
     const caseSlider02Instance = new Swiper(caseSlider02, {
-      loop: true,
       speed: 1500,
       allowTouchMove: false,
       slidesPerView: 1.11,
@@ -120,8 +103,17 @@ function initSwipers() {
       },
     });
   }
-}
 
+  const swipergallery = new Swiper(".swiper-gallery", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  window.thumbnail = function (index) {
+    swipergallery.slideToLoop(index - 1);
+  };
+}
 document.addEventListener("DOMContentLoaded", function () {
   initSwipers();
 });
@@ -165,23 +157,37 @@ $(".drawer-nav .parent-menu").on("click", function (e) {
   }
 });
 
+///////////////////////////////////////////
+//FAQ アコーディオン
+///////////////////////////////////////////
+$(".block_faq dd").hide();
+$(".block_faq dl:first").addClass("open").find("dd").show();
+$(".block_faq dl").on("click", function (e) {
+  $("dd", this).slideToggle("fast");
+  if ($(this).hasClass("open")) {
+    $(this).removeClass("open");
+  } else {
+    $(this).addClass("open");
+  }
+});
+
 ////////////////////////////////////////////////////////////////////////////////////////
 // GSAP アニメーション
 ///////////////////////////////////////////////////////////////////////////////////////
 // GSAPフェードイン
-const textElements = document.querySelectorAll(".fadeIn");
-if (textElements.length > 0) {
-  textElements.forEach((element) => {
-    gsap.from(element, {
-      opacity: 0,
-      y: 20,
-      duration: 0.8,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: element, // 各要素をトリガーに
-        start: "top 60%",
-        once: true,
-      },
-    });
-  });
-}
+// const textElements = document.querySelectorAll(".fadeIn");
+// if (textElements.length > 0) {
+//   textElements.forEach((element) => {
+//     gsap.from(element, {
+//       opacity: 0,
+//       y: 20,
+//       duration: 0.8,
+//       ease: "power2.out",
+//       scrollTrigger: {
+//         trigger: element,
+//         start: "top 60%",
+//         once: true,
+//       },
+//     });
+//   });
+// }

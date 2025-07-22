@@ -3,9 +3,32 @@
 /*************************************************
 top
 *************************************************/
+#top {
+  .fv,
+  header,
+  #event,
+  #news,
+  #insta {
+    background-color: v.$bg-color01;
+  }
+  .fv {
+    @include c.mq() {
+      background-color: #fff;
+    }
+  }
+  header {
+    @include c.mq() {
+      background-color: transparent;
+    }
+  }
+}
+
 .fv {
   position: relative;
-  margin-bottom: 2.6rem;
+  padding-bottom: 2.6rem;
+  @include c.mq() {
+    padding-bottom: 6rem;
+  }
   &::before {
     position: absolute;
     top: 3.2rem;
@@ -21,6 +44,20 @@ top
       width: 15.3rem;
       background: url(images/logo_mark02.svg) no-repeat center / contain;
       z-index: 1;
+    }
+  }
+  h1 {
+    position: absolute;
+    top: v.pxtovw(140);
+    left: v.pxtovw(120);
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    @include c.mq() {
+      font-size: 1rem;
+      top: 0.8rem;
+      left: v.pxtovw_sp(40);
+      color: #fff;
     }
   }
   .img-box {
@@ -41,8 +78,13 @@ top
       padding-left: v.pxtovw_sp(20);
       z-index: 2;
     }
-    h1 {
+    .fv-ttl {
+      font-family: "Noto Serif JP", serif;
       font-size: clamp(3.2rem, v.pxtovw(40), 6.4rem);
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 2px;
+      color: v.$ttlTxt-color;
       margin-bottom: 3.6rem;
       @include c.mq() {
         font-size: 3.2rem;
@@ -72,6 +114,14 @@ top
     display: flex;
     gap: 6px;
     margin: 0 auto;
+    @include c.mq() {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 10px 5px;
+      z-index: 998;
+    }
     .tel,
     .mail {
       width: calc((100% / 2) - 3px);
@@ -116,6 +166,7 @@ top
 #event {
   @include c.mq() {
     overflow: hidden;
+    padding-top: 8rem !important;
   }
   .block {
     align-items: center;
@@ -142,7 +193,7 @@ top
         aspect-ratio: 1/1;
         border-radius: 50%;
         background-color: #fff;
-        z-index: -1;
+        z-index: 0;
         @include c.mq() {
           top: -5rem;
           left: 50%;
@@ -150,6 +201,7 @@ top
         }
       }
       p {
+        position: relative;
         &:first-of-type {
           font-size: 6.4rem;
           line-height: 1.5;
@@ -195,8 +247,8 @@ top
         }
       }
       .img-wrap {
+        position: relative;
         width: 100vw;
-        // margin-left: calc(((100vw - 90%) / 2) * -1);
         gap: 1rem;
         overflow-x: scroll;
         .img-box {
@@ -234,6 +286,9 @@ top
         gap: 5px;
         background-color: v.$bg-color03;
         padding: 1rem 2.4rem;
+        @include c.mq() {
+          width: 23rem;
+        }
         p {
           @include c.flex(center, center);
           gap: 4px;
@@ -259,6 +314,7 @@ top
     }
   }
   .img-wrap {
+    position: relative;
     @include c.flex(between, center);
     .img-box {
       max-width: 39rem;
@@ -319,6 +375,12 @@ top
           dd {
             color: v.$subTxt-color02;
             transition: all 0.3s;
+            @include c.mq() {
+              width: 100%;
+            }
+          }
+          dd {
+            padding-right: 4rem;
           }
           &:hover {
             dt,
@@ -327,6 +389,9 @@ top
             }
             dt {
               padding-left: 2rem;
+              @include c.mq() {
+                padding-left: 0;
+              }
             }
           }
         }
@@ -336,6 +401,7 @@ top
 }
 
 #insta {
+  padding-bottom: 12rem;
   .inner {
     max-width: 100rem;
   }
@@ -355,12 +421,14 @@ top
 }
 
 #introduce {
+  position: relative;
   background: url(images/introduce_bg.jpg) no-repeat center/cover;
   border-radius: 3rem;
   overflow: hidden;
-  margin-top: 12rem;
+  margin-top: -3rem;
   padding: 11rem 0;
   @include c.mq() {
+    margin-top: -2rem;
     padding: 7rem 0 6rem;
   }
   div,
@@ -390,16 +458,22 @@ top
   .left {
     position: relative;
     .img-box {
-      width: 83%;
-      max-width: 40rem;
+      width: 28rem;
       margin-bottom: 2rem;
       border-radius: 3px;
       overflow: hidden;
+      @include c.mq() {
+        width: 83%;
+        max-width: 40rem;
+      }
     }
     .message {
       position: absolute;
       top: -2.4rem;
       right: -8rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
       z-index: 1;
       @include c.mq() {
         right: 0;
@@ -470,7 +544,6 @@ top
 
 #pediatric,
 #adult {
-  background: v.$bg-color02;
   .contents {
     &.head {
       .inner {
@@ -625,6 +698,7 @@ top
             max-width: 50rem;
             margin: 0 auto 1rem;
             border-radius: 3px;
+            overflow: hidden;
             z-index: 2;
             @include c.mq() {
               width: 100%;
@@ -685,6 +759,7 @@ top
             margin-bottom: 1rem;
             border-radius: 7px;
             background-color: #d5e2e8;
+            overflow: hidden;
             img {
               width: 100%;
               height: 100%;
@@ -733,7 +808,6 @@ top
         }
         .swiper-button-prev {
           transform: rotate(180deg);
-          opacity: 0.7;
           left: 5rem;
           @include c.mq() {
             left: v.pxtovw_sp(10);
@@ -757,10 +831,15 @@ top
 #pediatric {
   border-bottom-left-radius: 6rem;
   border-bottom-right-radius: 6rem;
+  padding-top: 13rem;
   padding-bottom: 11rem;
+  margin-top: -3rem;
+  background: v.$bg-color02;
   @include c.mq() {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    padding-top: 8rem;
+    margin-top: -2rem;
     padding-bottom: 8rem;
   }
   .contents {
@@ -893,7 +972,8 @@ top
     }
     &.geka {
       margin: 0 v.pxtovw(34) 10rem;
-      background: url(images/geka_bg.svg) no-repeat center/cover;
+      background: url(images/geka_bg.png) repeat center/contain;
+      // background: url(images/geka_bg.png) no-repeat center/cover;
       border-radius: 6px;
       padding: 6rem 0;
       @include c.mq() {
@@ -1059,7 +1139,7 @@ top
           gap: 1.5rem;
         }
         dt {
-          width: 5rem;
+          width: 7rem;
           img {
             width: 100%;
           }
