@@ -139,6 +139,7 @@ under
     @include c.mq() {
       font-size: 2rem;
       line-height: 1.5;
+      margin-top: 4rem;
       margin-bottom: 3rem;
     }
     &::before {
@@ -416,26 +417,26 @@ under
         display: contents;
       }
     }
-    &:has(h2, h3, h4) {
-      h2,
-      h3,
-      h4 {
-        margin-top: 0;
-      }
-      @include c.mq() {
-        h2,
-        h3,
-        h4 {
-          order: 1;
-        }
-        .img-box {
-          order: 2;
-        }
-        .txt-box {
-          order: 3;
-        }
-      }
-    }
+    // &:has(h2, h3, h4) {
+    //   h2,
+    //   h3,
+    //   h4 {
+    //     margin-top: 0;
+    //   }
+    //   @include c.mq() {
+    //     h2,
+    //     h3,
+    //     h4 {
+    //       order: 1;
+    //     }
+    //     .img-box {
+    //       order: 2;
+    //     }
+    //     .txt-box {
+    //       order: 3;
+    //     }
+    //   }
+    // }
     figure {
       figcaption {
         font-size: 1.3rem;
@@ -793,7 +794,7 @@ under
   }
 
   .block_merit-demerit {
-    margin: 8rem 0;
+    margin: 5rem 0 8rem;
     @include c.mq() {
       margin: 3rem 0 4rem;
     }
@@ -829,6 +830,14 @@ under
         ul {
           padding: 0 2rem;
           background-color: #fff;
+          .list-ttl {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            @include c.mq() {
+              font-size: 1.6rem;
+            }
+          }
         }
       }
       .merit {
@@ -1436,17 +1445,6 @@ under
   .block_pickup {
     margin: 5rem 0;
   }
-  .block_merit-demerit {
-    margin-top: 5rem;
-    .list-ttl {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      @include c.mq() {
-        font-size: 1.6rem;
-      }
-    }
-  }
 }
 
 // 子どものマウスピース矯正
@@ -1454,6 +1452,18 @@ under
   .block_img-txt {
     h3 {
       margin-top: 0;
+    }
+  }
+  .table_wrap {
+    @include c.mq(md) {
+      width: 100%;
+      overflow-x: scroll;
+    }
+    table {
+      @include c.mq(md) {
+        width: 120rem;
+        margin: 0 0 2rem;
+      }
     }
   }
   thead {
@@ -1498,10 +1508,17 @@ under
     ul {
       max-width: 60rem;
       border-radius: 5px;
+      @include c.mq() {
+        margin-top: 0;
+        order: 3;
+      }
       .ttl {
         font-size: 2rem;
         text-align: start;
         margin-bottom: 2rem;
+        @include c.mq() {
+          font-size: 1.6rem;
+        }
       }
       li {
         font-size: 1.6rem;
@@ -1510,16 +1527,21 @@ under
   }
 }
 
-// 子どものワイヤー矯正
 .page_wire-child {
-  .block_merit-demerit {
-    margin-top: 5rem;
-    .list-ttl {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      @include c.mq() {
-        font-size: 1.6rem;
+  .block_img-txt {
+    &:has(h4) {
+      h4 {
+        @include c.mq() {
+          margin: 1rem 0 0;
+        }
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+      ul {
+        @include c.mq() {
+          margin: 0;
+        }
       }
     }
   }

@@ -251,7 +251,7 @@
             <div class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/images/preortho_image.jpg" alt=""></div>
             <p>幼児期から始めるお口周りのトレーニング</p>
             <div class="btn-wrap">
-              <a class="btn03" href="#">
+              <a class="btn03" href="<?php echo home_url('/preortho'); ?>">
                 View More
                 <span>
                   <svg width="22" height="22" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,7 +269,7 @@
             <div class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/images/shoukyousei_image.jpg" alt=""></div>
             <p>永久歯がきれいに生えるスペースづくり</p>
             <div class="btn-wrap">
-              <a class="btn03" href="#">
+              <a class="btn03" href="<?php echo home_url('/orthodontic-plate'); ?>">
                 View More
                 <span>
                   <svg width="22" height="22" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -287,7 +287,7 @@
             <div class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/images/headgeer_image.jpg" alt=""></div>
             <p>顎の成長バランスを整える矯正治療</p>
             <div class="btn-wrap">
-              <a class="btn03" href="#">
+              <a class="btn03" href="<?php echo home_url('/headgear-mask'); ?>">
                 View More
                 <span>
                   <svg width="22" height="22" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -305,7 +305,7 @@
             <div class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/images/wire_image.jpg" alt=""></div>
             <p>顎の成長バランスを整える矯正治療</p>
             <div class="btn-wrap">
-              <a class="btn03" href="#">
+              <a class="btn03" href="<?php echo home_url('/wire-child'); ?>">
                 View More
                 <span>
                   <svg width="22" height="22" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -323,7 +323,7 @@
             <div class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/images/mouthpiece_image.jpg" alt=""></div>
             <p>学校でも気にならない、透明な矯正装置</p>
             <div class="btn-wrap">
-              <a class="btn03" href="#">
+              <a class="btn03" href="<?php echo home_url('/mouthpiece-child'); ?>">
                 View More
                 <span>
                   <svg width="22" height="22" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -458,7 +458,7 @@
             <div class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/images/adult_mouthpiece_image.jpg" alt=""></div>
             <p>取り外せて目立ちにくい</p>
             <div class="btn-wrap">
-              <a class="btn03" href="#">
+              <a class="btn03 link_none" href="#">
                 View More
                 <span>
                   <svg width="22" height="22" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -475,7 +475,7 @@
             <div class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/images/adult_wire_image.jpg" alt=""></div>
             <p>装置が目立ちにくい</p>
             <div class="btn-wrap">
-              <a class="btn03" href="#">
+              <a class="btn03 link_none" href="#">
                 View More
                 <span>
                   <svg width="22" height="22" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -492,7 +492,7 @@
             <div class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/images/adult_part-ortho_image.jpg" alt=""></div>
             <p>気になる部分だけを整える</p>
             <div class="btn-wrap">
-              <a class="btn03" href="#">
+              <a class="btn03 link_none" href="#">
                 View More
                 <span>
                   <svg width="22" height="22" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -530,7 +530,7 @@
           <p>大学病院と連携した安全な手術体制で、骨格から整える治療を行なっています。</p>
         </div>
         <div class="btn-wrap">
-          <a class="btn01 white" href="">
+          <a class="btn01 white link_none" href="">
             外科矯正について
             <span>
               <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -641,7 +641,7 @@
         </div>
         <nav class="hover_opacity">
           <dl>
-            <a href="#">
+            <a class="link_none" href="#">
               <dt><img src="<?php echo get_template_directory_uri(); ?>/images/icon_treatment_kids.svg" alt=""></dt>
               <dd>
                 お子さまの歯の健康を守る
@@ -657,7 +657,7 @@
             </a>
           </dl>
           <dl>
-            <a href="#">
+            <a class="link_none" href="#">
               <dt><img src="<?php echo get_template_directory_uri(); ?>/images/icon_treatment_implant.svg" alt=""></dt>
               <dd>
                 しっかり噛める喜びをもう一度
@@ -673,7 +673,7 @@
             </a>
           </dl>
           <dl>
-            <a href="#">
+            <a class="link_none" href="#">
               <dt><img src="<?php echo get_template_directory_uri(); ?>/images/icon_treatment_dentures.svg" alt=""></dt>
               <dd>
                 見た目も噛み心地も快適な
@@ -689,7 +689,7 @@
             </a>
           </dl>
           <dl>
-            <a href="#">
+            <a class="link_none" href="#">
               <dt><img src="<?php echo get_template_directory_uri(); ?>/images/icon_treatment_perio.svg" alt=""></dt>
               <dd>
                 歯を失わないために今できる
@@ -705,7 +705,7 @@
             </a>
           </dl>
           <dl>
-            <a href="#">
+            <a class="link_none" href="#">
               <dt><img src="<?php echo get_template_directory_uri(); ?>/images/icon_treatment_ceramic.svg" alt=""></dt>
               <dd>
                 自然な白さと美しさを取り戻す
@@ -721,7 +721,7 @@
             </a>
           </dl>
           <dl>
-            <a href="#">
+            <a class="link_none" href="#">
               <dt><img src="<?php echo get_template_directory_uri(); ?>/images/icon_treatment_oyashirazu.svg" alt=""></dt>
               <dd>
                 痛みを最小限に不安に寄り添う

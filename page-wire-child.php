@@ -6,7 +6,7 @@
 
     <section class="under-head page-temp">
       <div class="sub-ttl">Wire Child</div>
-      <h1>子どものワイヤー矯正02</h1>
+      <h1>子どものワイヤー矯正</h1>
       <div class="img-box obj-fit">
         <img src="<?php echo get_template_directory_uri(); ?>/images/page_header_image.jpg" alt="">
       </div>
